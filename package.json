@@ -1,0 +1,11 @@
+{
+  "name": "baijs",
+  "version": "0.0.1",
+  "description": "Baijs theme for project pages.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "BSD"
+}
