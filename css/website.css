@@ -87,12 +87,13 @@ header h1 { width: 500px; padding: 10px 0 0; }
 }
 
 /* ------------- COLUMN MAIN BLOCKS -------------- */
-.block-menu { list-style: none; }
+.block-menu { list-style: none; margin: 0 0 0 -20px;}
 .block-menu li { display: inline; }
-.block-menu a { display: block; line-height: 35px; }
+.block-menu a { display: block; line-height: 35px; padding: 0 0 0 20px; }
+.block-menu .active { background-color: #ccc; }
 
 .list { padding: 0 0 10px 35px; }
-.list li{ padding: 5px 0; }
+.list li{ padding: 5px 0; line-height: 160%;}
 
 .addthis_toolbox { display:inline-block; width: 200px; }
 

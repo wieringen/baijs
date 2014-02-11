@@ -1,11 +1,18 @@
 {
   "name": "baijs",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Baijs theme for project pages.",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "author": {
+    "name": "Maarten Baijs",
+    "email": "wieringen@gmail.com"
   },
-  "author": "",
-  "license": "BSD"
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/wieringen/baijs/blob/master/LICENSE"
+    }
+  ],
+  "bugs": {
+    "url": "https://github.com/wieringen/baijs/issues"
+  }
 }
