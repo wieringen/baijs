@@ -1,5 +1,12 @@
-.col-main, #wrapper-inner, .col-content
-{ zoom: 1; }
+.col-main, #wrapper
+{
+    zoom: 1;
+}
 
-code {overflow: visible;}
-pre { overflow: auto; }
+code {
+    overflow: visible;
+}
+
+pre {
+    overflow: auto;
+}

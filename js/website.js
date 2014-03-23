@@ -3,6 +3,10 @@ $(document).ready(function(){
 
 	prettyPrint();
 
+	$("nav select").change(function() {
+	  window.location = $(this).find("option:selected").val();
+	});
+
 	//Other stuff
 	var oCon = document.getElementById('mcon');
 	if(oCon ){

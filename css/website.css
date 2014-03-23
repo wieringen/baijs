@@ -1,24 +1,209 @@
-/* GLOBAL SECTION ================================================================================= */
-html, body { height: 100%; margin: 0; padding: 0;}
-body { background-color: #f3f3f3; font:12px 'arial'; color: #555555; }
-a { color: #C01313; }
-a:hover { }
-ul { margin: 0; padding: 0; }
-p { margin: 0 0 10px; line-height:160%; }
-img { border: 0; }
+/* ---------- Globals ---------- */
 
-/* clears */
-.col-content:after
-{ clear:both; content:"."; display:block; font-size:0; height:0; line-height:0; overflow:hidden; }
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #f3f3f3;
+    font:12px "arial";
+    color: #555555;
+    -webkit-text-size-adjust: 100%;
+}
+
+a {
+    color: #C01313;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    margin: 0 0 10px;
+    line-height: 160%;
+}
+
+img {
+    border: 0;
+}
 
 /* headings */
-h1 { font: 34px "PT Sans"; color: #c01313; margin: 0; padding: 0; }
-h2 { font: 18px "PT Sans"; color: #c01313; margin: 0 0 10px; padding: 0; }
-h3 { font-size: 13px; clear: both; margin: 0; padding: 0; line-height:170%; }
+h1 {
+    font: 34px "PT Sans";
+    color: #c01313;
+    margin: 0;
+    padding: 0;
+}
 
-/* code */
-pre {  margin: 5px 0 35px; overflow: hidden; padding: 2px; border: 1px solid #ccc; position: relative; }
-code { padding: 5px 30px; display: block; background-color: #efefef; margin: 0;  overflow: auto;}
+h2 {
+    font: 18px "PT Sans";
+    color: #c01313;
+    margin: 0 0 10px;
+    padding: 0;
+}
+
+h3 {
+    font-size: 13px;
+    margin: 0;
+    padding: 0;
+    line-height:170%;
+}
+
+.block {
+    margin: 0 0 25px;
+}
+
+.list {
+    padding: 0 0 10px 35px;
+}
+
+.list li{
+    padding: 5px 0;
+    line-height: 160%;
+}
+
+/* structure */
+#wrapper {
+    position: relative;
+    width: 768px;
+    text-align: left;
+    margin: 0 auto;
+}
+
+#col-main {
+    background-color: #fff;
+    padding: 35px 20px 20px;
+    border: 1px solid #D0D0D0;
+    overflow: hidden;
+    width: 458px;
+    float:left;
+}
+
+#col-main:after
+{
+    clear: both;
+    content: ".";
+    display: block;
+    font-size: 0;
+    height: 0;
+    line-height: 0;
+    overflow: hidden;
+}
+
+#col-right {
+    width: 228px;
+    padding: 20px;
+    position: relative;
+    float: right;
+}
+
+/* header */
+#header {
+    height: 90px;
+    display: block;
+    padding: 0 20px;
+    position: relative;
+    overflow: hidden;
+    z-index: 100;
+}
+
+#header h1 {
+    width: 500px;
+    padding: 10px 0 0;
+}
+
+.slogan {
+    width: 500px;
+    padding: 5px 0 0 5px;
+    display: block;
+}
+
+.crest {
+    float: left;
+    margin: 0 10px 0 0;
+}
+
+.btn-download {
+    position: absolute;
+    right: 20px;
+    top: 25px;
+    display: block;
+    color: #fff;
+    margin: 0 0 10px;
+    text-decoration: none;
+    font: 16px/38px "PT Sans";
+    text-align: center;
+    background-color: #881313;
+    border: 1px solid #791313;
+    height: 38px;
+    width: 228px;
+}
+
+/* menu */
+#menu {
+    width: 228px;
+    padding: 20px;
+    position: relative;
+    float: right;
+}
+
+#menu select {
+    display: none;
+    width : 100%;
+}
+
+#menu ul {
+    list-style: none;
+    margin: 0 0 0 -20px;
+}
+
+#menu li {
+    display: inline;
+}
+
+#menu a {
+    display: block;
+    line-height: 35px;
+    padding: 0 0 0 20px;
+}
+
+#menu .active {
+    background-color: #ccc;
+}
+
+/* misc */
+.addthis_toolbox {
+    display:inline-block;
+    width: 200px;
+}
+
+#footer {
+    width: 500px;
+    clear: both;
+    padding:10px 0;
+    text-align:center;
+}
+
+/* syntax highlighter */
+pre {
+    margin: 5px 0 35px;
+    overflow: hidden;
+    padding: 2px;
+    border: 1px solid #ccc;
+    position: relative;
+}
+
+code {
+    padding: 5px 30px;
+    display: block;
+    background-color: #efefef;
+    margin: 0;
+    overflow: auto;
+}
 
 @media screen {
     .str { color: #C01313 }  /* string content */
@@ -46,56 +231,59 @@ code { padding: 5px 30px; display: block; background-color: #efefef; margin: 0; 
     .atn { color: #404 }
     .atv { color: #060 }
 }
-/* ------------- WRAPPER SECTION -------------- */
-#wrapper { text-align: center; }
-#wrapper-inner { position: relative; width: 768px; text-align: left; margin: 0 auto;  }
 
-/* ------------- COLUMNS SECTION -------------- */
+/* responsive */
+@media screen and (max-width: 760px) {
 
-#col-main {  width: 500px; display: block; float: left; }
-#col-right { width: 228px; padding: 20px; position: relative; float: left; }
+    #wrapper {
+        width: auto;
+    }
 
-.col-content {
-    background-color: #fff;
-    padding: 35px 20px 20px;
-    border: 1px solid #D0D0D0;
-    overflow: hidden;
+    #col-main {
+        width: auto;
+        float: none;
+    }
+
+    #col-right {
+        width: auto;
+        float: none;
+    }
+
+    #header {
+        height: auto;
+    }
+
+    #header h1 {
+        width: auto;
+    }
+
+    .slogan {
+        width: auto;
+        margin: 0 0 10px;
+    }
+
+    .btn-download {
+        position: relative;
+        top: 0;
+        left: 0;
+        width: auto;
+    }
+
+    #menu {
+        width: auto;
+        float: none;
+    }
+
+    #menu ul{
+        display : none;
+    }
+
+    #menu select {
+        display: block;
+    }
+
+    #footer {
+        width: auto;
+    }
+
 }
-
-/* ------------- HEADER SECTION -------------- */
-#header { height: 90px; display: block; padding: 0 20px; position: relative; overflow: hidden; z-index: 100; }
-#header h1,
-header h1 { width: 500px; padding: 10px 0 0; }
-.slogan { width: 500px; padding: 5px 0 0 5px; display: block; }
-.crest { float: left; margin: 0 10px 0 0; }
-
-.block {
-    margin: 0 0 25px;
-}
-.block-download{ position: absolute; right: 20px; top: 25px; }
-.download {
-    display: block;
-    color: #fff;
-    margin: 0 0 10px;
-    text-decoration: none;
-    font: 16px/38px "PT Sans";
-    text-align: center;
-    background-color: #881313;
-    border: 1px solid #791313;
-    height: 38px;
-    width: 228px;
-}
-
-/* ------------- COLUMN MAIN BLOCKS -------------- */
-.block-menu { list-style: none; margin: 0 0 0 -20px;}
-.block-menu li { display: inline; }
-.block-menu a { display: block; line-height: 35px; padding: 0 0 0 20px; }
-.block-menu .active { background-color: #ccc; }
-
-.list { padding: 0 0 10px 35px; }
-.list li{ padding: 5px 0; line-height: 160%;}
-
-.addthis_toolbox { display:inline-block; width: 200px; }
-
-/* ------------- FOOTER SECTION -------------- */
-.footer { width: 500px; clear: both; padding:10px 0; display: block; text-align:center; }
