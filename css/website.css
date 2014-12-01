@@ -144,35 +144,43 @@ h3 {
 }
 
 /* menu */
-#menu {
+.menu {
     width: 228px;
     padding: 20px;
     position: relative;
     float: right;
 }
 
-#menu select {
+.menu select {
     display: none;
     width : 100%;
 }
 
-#menu ul {
+.menu ul {
     list-style: none;
     margin: 0 0 0 -20px;
 }
 
-#menu li {
+.menu li {
     display: inline;
 }
 
-#menu a {
+.menu a {
     display: block;
     line-height: 35px;
     padding: 0 0 0 20px;
 }
 
-#menu .active {
+.menu .active {
     background-color: #ccc;
+}
+
+#col-right .menu {
+    margin: 0 20px 20px;
+}
+
+#col-right .menu ul {
+    margin: 0;
 }
 
 /* misc */
@@ -269,17 +277,21 @@ code {
         width: auto;
     }
 
-    #menu {
+    .menu {
         width: auto;
         float: none;
     }
 
-    #menu ul{
+    .menu ul{
         display : none;
     }
 
-    #menu select {
+    .menu select {
         display: block;
+    }
+
+    #col-right .menu {
+        margin: 0 0 20px;
     }
 
     #footer {
